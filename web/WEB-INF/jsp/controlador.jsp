@@ -1,6 +1,6 @@
 <%@taglib  prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@taglib prefix="x" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- 
     Document   : controlador
     Created on : 27-jul-2020, 14:53:06
@@ -15,15 +15,22 @@
     </head>
     <body>
         <h1></h1>
-         
-        <x:forEach  items="${miprimeravariable}" var="mivar">
-            <x:if test="${mivar.getEdad()==31}">
-            <x:out value="${mivar.getNombre()}"/>&nbsp
-            <x:out value="${mivar.getApellido()}"/>&nbsp
-            <x:out value="${mivar.getEdad()}"/>
-            </x:if>
-            
-            <br>
-        </x:forEach>
+        
+            <form:form action="controlador.htm" method="post" commandName="persona">
+            <form:label path="nombre">Nombre </form:label>
+                <form:input path="nombre"></form:input>
+                <br>
+                 <form:label path="apellido">Apellido </form:label>
+                <form:input path="apellido"></form:input>
+                <br>
+                 <form:label path="edad">Edad </form:label>
+                <form:input path="edad"></form:input>
+                <br>
+                <br>
+                 <form:label path="lugarnacimiento">Lugar de nacimiento </form:label>
+                <form:input path="lugarnacimiento"></form:input>
+                <br>
+                <form:button>Aceptar</form:button>
+            </form:form>
     </body>
 </html>

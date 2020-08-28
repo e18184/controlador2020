@@ -21,7 +21,10 @@
             <props>
                 <prop key="index.htm">indexController</prop>
                 <prop key="controlador.htm">controladorController</prop> 
-            </props>
+                <prop key="controlador2.htm">controlador2Controller</prop> 
+                 <prop key="objetos.htm">Controlador2</prop> 
+                 <prop key="madrem.htm">madremController</prop>
+             </props>    
         </property>
     </bean>
 
@@ -38,5 +41,7 @@
           p:viewName="index" />
     
     <bean name="controladorController" class="controlador.ControladorController" />
-
+     <bean name="controlador2Controller" class="controlador.controller" />
+     <bean name="Controlador2" class="controlador.Controlador2" />
+     <bean name="madremController" class="controlador.ControladorMadre" />
 </beans>

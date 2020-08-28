@@ -9,11 +9,21 @@
     </head>
 
     <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
+        <form:form action="controlador.htm" method="post" commandName="persona">
+            <form:label path="nombre">Nombre </form:label>
+                <form:input path="nombre"></form:input>
+                <br>
+                 <form:label path="apellido">Apellido </form:label>
+                <form:input path="apellido"></form:input>
+                <br>
+                 <form:label path="edad">Edad </form:label>
+                <form:input path="edad"></form:input>
+                <br>
+                <br>
+                 <form:label path="lugarnacimiento">Lugar de nacimiento </form:label>
+                <form:input path="lugarnacimiento"></form:input>
+                <br>
+                <form:button>Aceptar</form:button>
+            </form:form>
     </body>
 </html>

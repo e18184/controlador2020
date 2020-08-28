@@ -21,6 +21,9 @@ public class Estudiante {
         this.apellido = apellido;
         this.fechanacimiento = fechanacimiento;
     }
+    
+    public Estudiante(){
+    }
 
     public int getRu() {
         return ru;
@@ -52,6 +55,11 @@ public class Estudiante {
 
     public void setFechanacimiento(String fechanacimiento) {
         this.fechanacimiento = fechanacimiento;
+    }
+
+    @Override
+    public String toString() {
+        return "Estudiante{" + "ru=" + ru + ", nombre=" + nombre + ", apellido=" + apellido + ", fechanacimiento=" + fechanacimiento + '}';
     }
     
     
