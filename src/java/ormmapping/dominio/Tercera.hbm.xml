@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="dominio.Tercera" table="Tercera" lazy="false">
+		<id name="atributo1" column="Atributo1" type="string">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="atributo2" column="Atributo2" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="atributo3" column="Atributo3" type="string" length="255" not-null="false" lazy="false"/>
+		<set name="doses" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="TerceraAtributo1" not-null="true"/>
+			<one-to-many class="dominio.dos"/>
+		</set>
+	</class>
+</hibernate-mapping>
